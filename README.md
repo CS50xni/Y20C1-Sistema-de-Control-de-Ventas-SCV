@@ -1,0 +1,2 @@
+# Y20C1-Sistema-de-Control-de-Ventas-SCV
+Se posteara articulos de los animes de estreno del periodo que nos concierne, posteando nuestras expectativas, reseñas, criticas, resumenes dando lugar a la creatividad y libertad de expresion en esta creciente comunidad amantes del contenido friky, tambien es cierto que el sitio registrara un nombre de usuario y contraseña albergandolos en una base de datos, el usuario podra postear imagenes,videos, y dejar su comentario. 
