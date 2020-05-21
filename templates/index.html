@@ -1,0 +1,25 @@
+{% extends "pagina.html" %}
+
+{% block main %}
+    <form action="/page_princ" method="post">
+    <html lang="es">
+        <head>
+            <link rel="stylesheet" href="/static/styles.css">
+        </head>
+
+        <body>
+
+            <div class= Titulo>
+                <h1>Libreria Matias</h1>
+            </div>
+        <!--Barra de navegacion-->
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#redes">Redes</a></li>
+                </ul>
+        </body>
+    </html>
+    </form>
+
+{% endblock %}
