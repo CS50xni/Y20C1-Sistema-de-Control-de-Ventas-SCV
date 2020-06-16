@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block titulo%}Marcadores{% endblock %}
+{% block contenido %}
+    <section class="content-wrap">
+        <h1> Marcadores </h1>
+            <div class="store-wrap">
+                <div class="product-list">
+                    <h2>Sharpie</h2>
+                    <img src="{{ url_for('static', filename='image/marcador1.png')}}" width="200">
+                    <h2>Precio C$ 450.00</h2>
+                    <ul>
+                        <li>Marcadores P/FINE</li>
+                        <li>24 Unidades</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Sharpie P/FINE',450.00,1,'Marcadores')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Stabilo</h2>
+                    <img src="{{ url_for('static', filename='image/marcador2.png')}}" width="200">
+                    <h2>Precio C$ 250.00</h2>
+                    <ul>
+                        <li>Marcadores P/Fine</li>
+                        <li>30 Unidades</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Stabilo',250.00,1,'Marcadores')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Staedtler</h2>
+                    <img src="{{ url_for('static', filename='image/marcador3.png')}}" width="200">
+                    <h2>Precio C$ 450.00</h2>
+                    <ul>
+                        <li>Marcadores P/Fine</li>
+                        <li>36 Unidades</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Staedtler',450.00,1,'Marcadores')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Tucan</h2>
+                    <img src="{{ url_for('static', filename='image/marcador4.png')}}" width="200">
+                    <h2>Precio C$ 50.00</h2>
+                    <ul>
+                        <li>Marcadores</li>
+                        <li>12 Unidades</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Tucan 12 Unidades',50.00,1,'Marcadores')">Reservar</button>
+                </div>
+            </div>
+    </section>
+{% endblock %}

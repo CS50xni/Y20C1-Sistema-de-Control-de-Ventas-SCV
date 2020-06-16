@@ -1,25 +1,88 @@
-{% extends "pagina.html" %}
-
-{% block main %}
-    <form action="/page_princ" method="post">
-    <html lang="es">
-        <head>
-            <link rel="stylesheet" href="/static/styles.css">
-        </head>
-
-        <body>
-
-            <div class= Titulo>
-                <h1>Libreria Matias</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <script src="/static/script.js"></script>
+    <script src="https://kit.fontawesome.com/6954c5188b.js" crossorigin="anonymous"></script>
+    <title>{% block titulo %}{% endblock %}</title>
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <header>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="/inicio"><i class="fab fa-earlybirds"></i>Libreria Matias</a></li>
+                <li><a href="/history">Sobre Nosotros</a></li>
+                <li><a>Artículos escolares<i class="fas fa-caret-down"></i></a>
+                    <ul class= "submenu">
+                        <li><a href="/cuadernos">Cuadernos</a></li>
+                        <li><a href="/lapices">Lápices</a></li>
+                        <li><a href="/marcadores">Marcadores</a></li>
+                    </ul>
+                </li>
+                <li><a>Accesorios<i class="fas fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="/audifonos">Audífonos</a>
+                        </li>
+                        <li><a href="/memorias">Memorias</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/reservas"><i class="fas fa-cart-arrow-down"></i>Mi carrito</a></li>
+                <li><a href="/home"><i class="fas fa-user"></i>Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block contenido %}{% endblock %}
+    <!--Informacion de Pagina Web-->
+    <footer>
+        <div class="container-all">
+            <div class="container-body">
+                <div class="bloque1">
+                    <h1>Más información de Líbreria Matías</h1>
+                        <div class= column1>
+                            <img src="{{ url_for('static', filename='image/icon-house.png')}}">
+                            <p>
+                            Dirección: Managua, Nicaragua
+                            Carretera nueva a León km 18
+                            Residencial Ciudad el Doral
+                            Casa x-24, Calle 12 avenida 8.
+                            </p>
+                        </div>
+                        <div class="column1">
+                            <img src="{{ url_for('static', filename='image/icon-contact.png')}}">
+                            <p>libreriamatias9@gmail.com</p>
+                        </div>
+                        <div class="column1">
+                            <img src="{{ url_for('static', filename='image/icon-celular.png')}}">
+                            <p>+505 77938393</p>
+                        </div>
+                </div>
+                <div class="bloque2">
+                    <h1>Redes sociales</h1>
+                        <div class="column2">
+                            <img src="{{ url_for('static', filename='image/icon-facebook.png')}}">
+                            <a href="https://es-la.facebook.com/pages/category/Bookstore/Libreria-Matias-696116843849146/">Siguenos en Facebook</a>
+                        </div>
+                        <div class="column2">
+                            <img src="{{ url_for('static', filename='image/icon-instagram.png')}}">
+                            <a href="https://www.instagram.com/libreriamatias_eldoral/">Siguenos en Instagram</a>
+                        </div>
+                </div>
             </div>
-        <!--Barra de navegacion-->
-                <ul>
-                    <li><a class="active" href="#home">Home</a></li>
-                    <li><a href="#products">Productos</a></li>
-                    <li><a href="#redes">Redes</a></li>
-                </ul>
-        </body>
-    </html>
-    </form>
-
-{% endblock %}
+        </div>
+        <div class="creditos-page">
+            <em>
+                2020 Page created by Cristel Gutiérrez - Jeffrey Miranda. All Rights Reserved.
+            </em>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

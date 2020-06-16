@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+
+{% block titulo%}Sobre Nosotros{% endblock %}
+{% block contenido %}
+
+    <div class="content-history">
+        <div class="titulo-history">
+            <h2> Nuestra Historia</h2>
+            <hr>
+        </div>
+        <div class="parrafo-history">
+            <p align="center"><b>La perseverancia y la dedicación son los motores principales
+            para sacar adelante un negocio.</b></p><br>
+            <p><b>Líbreria Matías</b> empezó brindando servicios de impresión y copias,
+            sin embargo, después de cierto tiempo vierón un potencial en ese rubro y
+            poco fueron creando la líbreria.</p>
+        </div>
+        <img src="{{ url_for('static', filename='image/history1.jpeg')}}">
+        <div class="parrafo-history">
+            <p>Anteriormente Líbreria Matías brindaba atención por las noches y los fines de semana,
+            actualmente tiene un horario extendido de lunes a domingo y cuentan con gran variedad
+            de artículos escolares y productos que los clientes necesiten.</p>
+            <p>Como todo negocio las cosas no han sido fácil, pero sabiendo administrar responsablemente
+            y con la ayuda de Dios el negocio poco a poco ha ido creciendo; y es asi que hay proyectos
+            a futuro de poder tener una segunda sucursal dentro del Residencial Ciudad El Doral.</p>
+        </div>
+        <div class="img-history">
+            <img src="{{ url_for('static', filename='image/history2.jpeg')}}">
+        </div>
+        <div class="parrafo-history">
+            <p>Líbreria Matías a como se mencionaba inició brindando servicios de impresión y copias con
+            una impresora multifuncional, ya que está estaba sin uso, en donde surgió la idea de poner
+            un pequeño negocio resurtiendo con lo mas básico para una pequeña líbreria, lo cual tras
+            los años venideros el potencial creció y se remodeló la sucursal príncipal dando un mayor
+            espacio para diferentes categorías de productos.
+            </p><br>
+            <p>Ahora en la temporada de reingreso escolar, todos los años nos extendemos dentro
+            del Residencial Ciudad El Doral en casa K-11 ubicada en calle 4 avenida 16, donde
+            encontarán con nuestros mismos productos y mismo servicios.</p>
+        </div>
+        <div class="img-history">
+            <img src="{{ url_for('static', filename='image/history3.jpeg')}}">
+        </div>
+    </div>
+
+{% endblock %}

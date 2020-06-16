@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/styleregister.css">
+        <title>Pagina de Registro</title>
+    </head>
+    <body>
+        <section class="rectangulo-wrap">
+            <section class="info-title">
+                <h2>Libreria<br>Matias</h2>
+                <img src="{{ url_for('static', filename='image/logo.png')}}" alt="Libreria Matias"/>
+                <p>Utiles Escolares y <br> Utiles de Oficina</p>
+            </section>
+            <form action="/register" method="post" class="form-register">
+                <h2>Pagina de Registro</h2>
+                <div class="form-group">
+                    <input name="names" autocomplete="off" placeholder="Nombres" type="text"/>
+                </div>
+                <div class="form-group">
+                    <input name="phone" autocomplete="off" placeholder="Telefono / Celular" type="text"/>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus name="user" placeholder="Usuario" type="text">
+                </div>
+                <div class="form-group">
+                    <input name="password" placeholder="Password" type="password"/>
+                </div>
+                <div class="form-button">
+                <button class="boton-reg" type="submit">Registrarse</button>
+                </div>
+            </form>
+            {%with messages = get_flashed_messages(with_categories=true)%}
+                {% if messages %}
+                    {%for category, message in messages%}
+                        <div class="alert {{category}}" id="idMensajeError">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                {%endif%}
+            {%endwith%}
+        </section>
+     </body>
+</html>

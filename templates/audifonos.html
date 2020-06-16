@@ -1,0 +1,98 @@
+{% extends "index.html" %}
+
+{% block titulo%}Audifonos{% endblock %}
+{% block contenido %}
+    <section class="content-wrap">
+        <h1> Audifonos </h1>
+            <div class="store-wrap">
+                <div class="product-list">
+                    <h2>Klip</h2>
+                    <img src="{{ url_for('static', filename='image/klip1.png')}}" width="200">
+                    <h2>Precio C$ 120.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Sin Microfono</li>
+                        <li>KSE-105</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Klip SteroEar sin microfonos',120.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Klip</h2>
+                    <img src="{{ url_for('static', filename='image/klip2.png')}}" width="200">
+                    <h2>Precio C$ 550.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfonos</li>
+                        <li>KHS-851BK</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Klip Akoustik',550.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Klip</h2>
+                    <img src="{{ url_for('static', filename='image/klip3.png')}}" width="200">
+                    <h2>Precio C$ 225.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>KHS-215WH</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Klip BeatBuds con microfonos',225.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Klip</h2>
+                    <img src="{{ url_for('static', filename='image/klip4.png')}}" width="200">
+                    <h2>Precio C$ 190.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>KHS-220RED</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Klip NeatBuds con microfonos',190.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell</h2>
+                    <img src="{{ url_for('static', filename='image/maxell1.png')}}" width="200">
+                    <h2>Precio C$ 250.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>Metalicos</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Maxell Metalicos con microfonos',250.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell</h2>
+                    <img src="{{ url_for('static', filename='image/maxell2.png')}}" width="200">
+                    <h2>Precio C$ 120.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>Stereo Buds</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Maxell SteroBuds',120.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell</h2>
+                    <img src="{{ url_for('static', filename='image/maxell3.png')}}" width="200">
+                    <h2>Precio C$ 180.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>Stereo Plugs</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Maxell StereoPlugs',180.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell</h2>
+                    <img src="{{ url_for('static', filename='image/maxell4.png')}}" width="200">
+                    <h2>Precio C$ 100.00</h2>
+                    <ul>
+                        <li>Audifonos</li>
+                        <li>Microfono</li>
+                        <li>In Ear</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Audifonos Maxell InEar',100.00,1,'Accesorios')">Reservar</button>
+                </div>
+            </div>
+    </section>
+{% endblock %}

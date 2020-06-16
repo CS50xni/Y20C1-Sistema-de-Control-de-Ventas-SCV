@@ -1,103 +1,349 @@
-                /* Estilo de la Pagina Principal*/
-    /*Cuerpo de la Pagina*/
-body
-{
-    background-color: #DBDBDC;
-    padding: 1%;
-    font-size: 46px;
-    color: #345171;
-    text-align: center;
-    font-family: "Century Schoolbook";
-}
-    /*Cuerpo de la pagina - Boton para acceder*/
-.Boton{
-    border: 1px;
-    padding: 10px;
-    background-color: #2e518b;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 50px;
-}
-
-.Boton:hover{
-    background: #424242;
-}
-
-    /*Cuerpo de la pagina - Fondo Rectangulo*/
-.Rectangulo{
-    border: 2px #FF6400;
-    background-color: #ECECEC;
-    padding: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    box-shadow: 6px 6px 6px #878787;
-    border-radius: 10px;
-    display: inline-block;
-}
-    /*Cuerpo de la pagina - Informacion de la Libreria*/
-.Informacion{
-    font-size: 40%;
-}
-
-
-                /* Estilo de la Pagina de Contenido*/
-    /*Titulo de la pagina*/
-.Titulo{
-    font-size: 100%;
-}
-    /*Menu navigador*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #48B0B0;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #424242;
-}
-
-                /* Estilo de la Pagina de Registro*/
-    /*Cuerpo de la pagina - Fondo Rectangulo*/
-.Rectangulo{
-    border: 2px #FF6400;
-    background-color: #ECECEC;
-    padding: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    box-shadow: 6px 6px 6px #878787;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-body
-{
-    background-color: #DBDBDC;
-    padding: 1%;
-    font-size: 20px;
-    color: #345171;
-    text-align: center;
-    font-family: "Century Schoolbook";
-}
-
-input{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+                /* Estilo de la Pagina Principal Index*/
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    border: 2px solid red;
-    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #D8D8D8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+                /*Barra de Navegacion*/
+.navegacion{
+    width: 100%;
+    margin: auto;
+    background-color: #48B0B0;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+
+}
+
+.menu > li > a{
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    color: #8B0000;
+}
+
+            /*Navegacion Submenu*/
+.submenu{
+    position: absolute;
+    padding: 12px 22px;
+    display: none;
+    background: #A9A9A9;
+    z-index: 4;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+                    /*Index History*/
+.content-history{
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.titulo-history hr{
+    margin-top: 20px;
+    width: 100%;
+    height: 6px;
+    background: #48B0B0;
+}
+
+.titulo-history h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+    color: #48B0B0;
+}
+
+.parrafo-history{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #585858;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.content-history img{
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px #878787;
+    border-radius: 20px;
+}
+
+
+                                    /*Diseño Index Inicio*/
+.content-inicio{
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.content-inicio > img{
+    width: 80px;
+    height: 80px;
+}
+
+.titulo-inicio,
+.parrafo-inicio{
+    display: inline-block;
+}
+.titulo-inicio{
+    font-size: 30px;
+    text-align: center;
+    color: #48B0B0;
+}
+
+.parrafo-inicio{
+    font-size: 18px;
+    color: #585858;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.parrafo-inicio > hr{
+    margin-top: 20px;
+    width: 100%;
+    height: 4px;
+    background: #48B0B0;
+}
+
+.imagenes-inicio img{
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px #878787;
+    border-radius: 20px;
+}
+
+                                /* Diseño Index footer*/
+footer{
+    width: 100%;
+    background: #585858;
+    color: white;
+}
+
+.container-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-body{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloque1{
+    max-width: 400px;
+}
+
+.bloque2{
+    max-width: 400px;
+}
+
+.bloque1 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.bloque2 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.bloque1 h1{
+    font-size: 22px;
+}
+
+.bloque2 h1{
+    font-size: 22px;
+}
+
+.column1{
+    margin-top: 20px;
+    display: flex;
+    color: white;
+}
+
+.column1 img{
+    width: 36px;
+    height: 36px;
+}
+
+.column1 p{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.column2{
+    margin-top:20px;
+    display: flex;
+    color: white;
+}
+
+.column2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.column2 p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.creditos-page{
+    text-align: center;
+}
+                            /*Estilo de Pagina Cuaderno*/
+
+.content-wrap{
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.content-wrap h1{
+    font-weight: 400;
+    font-size: 40px;
+    color: #48B0B0;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.store-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store-wrap .product-list{
+    width: 275px;
+    margin: 1%;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px #878787;
+}
+
+.store-wrap .product-list img{
+    width: 100%;
+    height: auto;
+}
+
+.product-list{
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+}
+
+.product-list h2,
+.product-list li{
+    text-align: center;
+    color: #585858;
+}
+
+.product-list ul{
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.product-list button{
+    background-color: #48B0B0;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+                            /*Pagina Reservas*/
+section > table{
+    max-width: 1200px;
+    border: 10px;
+    margin: auto;
+}
+
+section .btn{
+    margin: 10px;
+}
+
+
+    /* Diseño Responsive*/
+@media screen and (max-width: 1220px){
+    .content-history,                                           /*pagina de historia*/
+    .content-inicio,                                            /*pagina de inicio*/
+    .container-all,                                              /*footer*/
+    .content-wrap,                                              /*pagina de catalogos*/
+    .content-encabezado{
+        max-width: 1000px;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .content-history,
+    .content-inicio,
+    .container-body{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-body{
+        display: block;
+        text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    .content-history,
+    .content-inicio,
+    .container-body,
+    .store-wrap{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-body{
+        display: block;
+        text-align: center;
+    }
+
+    .product-list{
+        width:100%;
+        display: block;
+        text-align: center;
+    }
 }

@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block titulo%}Reserva{% endblock %}
+{% block contenido %}
+    <section>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td>TOTAL: {{total}}</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          {%for detalle in detalles%}
+          <tr>
+            <td>{{ detalle.nombre_prod }}</td>
+            <td>{{ detalle.precio }}</td>
+            <td>{{ detalle.categoria }}</td>
+            <td>{{ detalle.cantidad }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Comprar
+      </button>
+          <a href="/cuadernos"><button class="btn btn-primary"> Regresar</button></a>
+    </section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Compras Libreria Matias</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  ¿Seguro de comprar?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="comprar()">Guardar Cambios</button>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}

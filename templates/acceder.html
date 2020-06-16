@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/styleacceso.css">
+        <title>LogIn</title>
+    </head>
+    <body>
+        <section class="cont-wrap">
+            <!--Nombre del Negocio + Logo-->
+            <section class="inform-contacto">
+                <section class="inform-titulo">
+                    <h1>LIBRERIA<br>MATIAS</h1>
+                    <img src="{{ url_for('static', filename='image/logo.png')}}" alt="Libreria Matias"/>
+                </section>
+                <form action="/login" method="post" class="forml-register">
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus name="user" placeholder="Usuario" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" placeholder="Contraseña" type="password"/>
+                    </div>
+                    <div class="form-button">
+                    <button class="boton-reg" type="submit">Acceder</button>
+                    </div>
+                </form>
+                {%with messages = get_flashed_messages(with_categories=true)%}
+                {% if messages %}
+                    {%for category, message in messages%}
+                        <div class="alert {{category}}" id="idMensajeError">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                {%endif%}
+            {%endwith%}
+            </section>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+{% extends "index.html" %}
+
+{% block titulo%}Lapices{% endblock %}
+{% block contenido %}
+    <section class="content-wrap">
+        <h1> Lapiz, Lapices y Lapiceros </h1>
+            <div class="store-wrap">
+                <div class="product-list">
+                    <h2>FaberCastell</h2>
+                    <img src="{{ url_for('static', filename='image/lapiz1.png')}}" width="200">
+                    <h2>Precio C$ 85.00</h2>
+                    <ul>
+                        <li>Lapiz de Grafito</li>
+                        <li>Graduados</li>
+                        <li>Por Caja y Unidad</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('FaberCastell',85.00,1,'Lapiz grafito')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>MAPED</h2>
+                    <img src="{{ url_for('static', filename='image/lapiz2.png')}}" width="200">
+                    <h2>Precio C$ 95.00</h2>
+                    <ul>
+                        <li>Lapiz de Grafito</li>
+                        <li>HB</li>
+                        <li>Por Caja y Unidad</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('MAPED',95.00,1,'Lapiz grafito')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>PaperMate</h2>
+                    <img src="{{ url_for('static', filename='image/lapiz3.png')}}" width="200">
+                    <h2>Precio C$ 85.00</h2>
+                    <ul>
+                        <li>Lapiz de Grafito Mongol</li>
+                        <li>HB</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('PaperMate',85.00,1,'Lapiz grafito')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Stabilo</h2>
+                    <img src="{{ url_for('static', filename='image/lapiz4.png')}}" width="200">
+                    <h2>Precio C$ 100.00</h2>
+                    <ul>
+                        <li>Lapiz de Grafito</li>
+                        <li>Graduados</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Stabilo',100.00,1,'Lapiz grafito')">Reservar</button>
+                </div>
+    <!--Lapiceros-->
+                <div class="product-list">
+                    <h2>FaberCastell</h2>
+                    <img src="{{ url_for('static', filename='image/lapicero1.png')}}" width="200">
+                    <h2>Precio C$ 95.00</h2>
+                    <ul>
+                        <li>Lapiceros</li>
+                        <li>Varios Colores</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('FaberCastell',95.00,1,'Lapiceros')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Bic</h2>
+                    <img src="{{ url_for('static', filename='image/lapicero2.png')}}" width="200">
+                    <h2>Precio C$ 65.00</h2>
+                    <ul>
+                        <li>Lapiceros</li>
+                        <li>Varios Colores</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Bic',65.00,1,'Lapiceros')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Pentel</h2>
+                    <img src="{{ url_for('static', filename='image/lapicero3.png')}}" width="200">
+                    <h2>Precio C$ 110.00</h2>
+                    <ul>
+                        <li>Lapicero Gel</li>
+                        <li>Varios Colores</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Pentel',110.00,1,'Lapiceros')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Stabilo</h2>
+                    <img src="{{ url_for('static', filename='image/lapicero4.png')}}" width="200">
+                    <h2>Precio C$ 80.00</h2>
+                    <ul>
+                        <li>Lapiceros</li>
+                        <li>Varios Colores</li>
+                        <li>Por Caja</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Stabilo',80.00,1,'Lapiceros')">Reservar</button>
+                </div>
+    <!--Lapices de Colores-->
+                <div class="product-list">
+                    <h2>PrismaColor</h2>
+                    <img src="{{ url_for('static', filename='image/lapicescolor1.png')}}" width="200">
+                    <h2>Precio C$ 220.00</h2>
+                    <ul>
+                        <li>Lapices de colores</li>
+                        <li>24 Unidades</li>
+                        <li>36 Unidades</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('PrismaColor',220.00,1,'Lapices de colores')">Reservar</button>
+                </div>
+                 <div class="product-list">
+                    <h2>Bic</h2>
+                    <img src="{{ url_for('static', filename='image/lapicescolor2.png')}}" width="200">
+                    <h2>Precio C$ 150.00</h2>
+                    <ul>
+                        <li>Lapices de colores</li>
+                        <li>12 Unidades</li>
+                        <li>24 Unidades</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('150',150.00,1,'Lapices de colores')">Reservar</button>
+                </div>
+                 <div class="product-list">
+                    <h2>FaberCastell</h2>
+                    <img src="{{ url_for('static', filename='image/lapicescolor3.png')}}" width="200">
+                    <h2>Precio C$ 320.00</h2>
+                    <ul>
+                        <li>Lapices de colores</li>
+                        <li>24 Unidades</li>
+                        <li>60 Unidades</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('FaberCastell',320.00,1,'Lapices de colores')">Reservar</button>
+                </div>
+                 <div class="product-list">
+                    <h2>Pelikan</h2>
+                    <img src="{{ url_for('static', filename='image/lapicescolor4.png')}}" width="200">
+                    <h2>Precio C$ 200.00</h2>
+                    <ul>
+                        <li>Lapices de colores</li>
+                        <li>12 Unidades</li>
+                        <li>24 Unidades</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Pelikan',200.00,1,'Lapices de colores')">Reservar</button>
+                </div>
+            </div>
+    </section>
+{% endblock %}

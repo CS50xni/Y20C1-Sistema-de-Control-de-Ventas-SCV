@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block titulo%}Sobre Nosotros{% endblock %}
+{% block contenido %}
+                                <!--Titulo de la Pagina + Logo-->
+    <div class="content-inicio">
+        <img src="{{ url_for('static', filename='image/logo.png')}}" alt=" Logo Libreria Matias" />
+        <div class="titulo-inicio">
+            <h2> Libreria Matias</h2>
+        </div>
+        <div class="parrafo-inicio">
+            <p>Se ofrecen articulos escolares y de oficina, materiales para manualidades,
+                detalles para obsequios, accesorios para festejar cumpleaños, globos, helio para sus globos
+                dulces, manteles. Tambien se ofrece los servicios de fotocopias, impresion,
+                internet, escaneo, levantado de texto, emplasticado, encolochado y encuadernado,
+                recargas claro, movistar y de cootel y mas...</p>
+            <hr>
+        </div>
+        <div class="imagenes-inicio">
+            <img src="{{ url_for('static', filename='image/inicio1.jpg')}}" Alt "Fachada de Negocio"/>
+            <img src="{{ url_for('static', filename='image/inicio2.jpg')}}" Alt "Regreso a Clases"/>
+            <img src="{{ url_for('static', filename='image/inicio3.jpg')}}" Alt "Publicidad Sucursales"/>
+        </div>
+    </div>
+
+{% endblock %}

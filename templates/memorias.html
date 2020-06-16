@@ -1,0 +1,98 @@
+{% extends "index.html" %}
+
+{% block titulo%}Memorias{% endblock %}
+{% block contenido %}
+    <section class="content-wrap">
+        <h1> Memorias USB Y SD </h1>
+            <div class="store-wrap">
+                <div class="product-list">
+                    <h2>HP 16Gb</h2>
+                    <img src="{{ url_for('static', filename='image/usb1.png')}}" width="200">
+                    <h2>Precio C$ 160.00</h2>
+                    <ul>
+                        <li>Flash Drive</li>
+                        <li>V 170W</li>
+                        <li>Usb 2.0</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria USB HP 16GB',160.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell 8Gb</h2>
+                    <img src="{{ url_for('static', filename='image/usb2.png')}}" width="200">
+                    <h2>Precio C$ 120.00</h2>
+                    <ul>
+                        <li>Flash Drive</li>
+                        <li>V 170W</li>
+                        <li>Usb 2.0</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria USB MAxell 8GB',120.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>HP 32Gb</h2>
+                    <img src="{{ url_for('static', filename='image/usb3.png')}}" width="200">
+                    <h2>Precio C$ 260.00</h2>
+                    <ul>
+                        <li>Flash Drive</li>
+                        <li>V 245W</li>
+                        <li>Usb 2.0</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria USB HP 32GB',260.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>HP 32Gb</h2>
+                    <img src="{{ url_for('static', filename='image/usb1.png')}}" width="200">
+                    <h2>Precio C$ 260.00</h2>
+                    <ul>
+                        <li>Flash Drive</li>
+                        <li>V 250W</li>
+                        <li>Usb 3.0</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria USB HP 3.0 32GB', 260.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Kingston 16Gb</h2>
+                    <img src="{{ url_for('static', filename='image/sd1.png')}}" width="200">
+                    <h2>Precio C$ 180.00</h2>
+                    <ul>
+                        <li>MicroSd</li>
+                        <li>Con Adaptador</li>
+                        <li>Class 10</li>
+                    </ul>
+                    <button>Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Kingston 32Gb</h2>
+                    <img src="{{ url_for('static', filename='image/sd2.png')}}" width="200">
+                    <h2>Precio C$ 240.00</h2>
+                    <ul>
+                        <li>MicroSd</li>
+                        <li>Con Adaptador</li>
+                        <li>Class 10</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria MicroSd Kingston 32GB',240.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>Maxell 8Gb</h2>
+                    <img src="{{ url_for('static', filename='image/sd3.png')}}" width="200">
+                    <h2>Precio C$ 140.00</h2>
+                    <ul>
+                        <li>MicroSd</li>
+                        <li>Con Adaptador</li>
+                        <li>Class 10</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria MicroSd Maxell 8GB',140.00,1,'Accesorios')">Reservar</button>
+                </div>
+                <div class="product-list">
+                    <h2>SanDisk 16Gb</h2>
+                    <img src="{{ url_for('static', filename='image/sd4.png')}}" width="200">
+                    <h2>Precio C$ 180.00</h2>
+                    <ul>
+                        <li>MicroSd Ultra</li>
+                        <li>Con Adaptador</li>
+                        <li>Class 10</li>
+                    </ul>
+                    <button onclick="agregarAlCarrito('Memoria MicroSd SanDisk 16GB',180.00,1,'Accesorios')">Reservar</button>
+                </div>
+            </div>
+    </section>
+{% endblock %}
