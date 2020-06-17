@@ -15,6 +15,7 @@ function realizarPeticion(ruta, nombreParam, valoresParam, mensaje){
                 var res = JSON.parse(this.responseText);
                 console.log(res);
                 alert(mensaje);//eliminar
+                return false;
                 location.reload();
             }
     };

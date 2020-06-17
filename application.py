@@ -152,7 +152,11 @@ def cargarDetalle():
     precio = request.args.get("precio")
     cantidad = request.args.get("cantidad")
     categoria = request.args.get("categoria")
-
+    ##res= Select * from detalle carrito where producto = el producto que quiro y carrito=sea mi carrito
+    ##if res
+        ##update cantidad where carrito sea el correcto y el producto sea el correcto.
+    ##else
+        ##Insert
     res = db.execute("INSERT INTO detalle_carrito (id_carrito, nombre_prod, cantidad, precio, categoria) VALUES(:idcar, :nombre,:cant, :prec, :cat)",
                     idcar = id_carrito,
                     nombre = nombre,

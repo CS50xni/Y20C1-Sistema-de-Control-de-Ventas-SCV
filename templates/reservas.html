@@ -7,9 +7,10 @@
         <thead>
           <tr>
             <th>Producto</th>
-            <th>Precio</th>
+            <th>Precio Unitario</th>
             <th>Categoría</th>
             <th>Cantidad</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tfoot>
@@ -24,6 +25,7 @@
             <td>{{ detalle.precio }}</td>
             <td>{{ detalle.categoria }}</td>
             <td>{{ detalle.cantidad }}</td>
+            <td> boton editar | boton elimninar</td>
           </tr>
           {% endfor %}
         </tbody>
