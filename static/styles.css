@@ -313,12 +313,14 @@ div .container{
 
 section .btn{
     margin: 10px;
+    display:block;
+    align-items: center;
 }
+
 
 .btn-primary{
     background-color: #48B0B0;
     border-color: #48B0B0;
-    width: 150px;
 }
 
 .card-body input{
@@ -328,6 +330,7 @@ section .btn{
 }
 
 .card{
+    display: block;
     margin: 20px;
     width: 90%;
     box-shadow: 2px 5px 5px gray;
@@ -336,7 +339,9 @@ section .btn{
 }
 
 .card .card-body{
+    align-items: center;
     text-align: center;
+    margin: auto;
 }
 .card-body i{
     font-size: 60px;

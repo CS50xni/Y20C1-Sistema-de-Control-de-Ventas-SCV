@@ -15,9 +15,9 @@
                     <h6 class="card-subtitle mb-2 text-muted">Categoría: {{ detalle.categoria }}</h6>
                     <p class="card-text">Precio: ${{ detalle.precio }}
                     <p class="card-text">Cantidad: {{ detalle.cantidad }}</p>
-                    <a href="#" onclick="cambiarCantidad({{detalle.id_detalle_carrito}},'cantidad-{{detalle.id_detalle_carrito}}');" class="btn btn-primary">Editar</a>
                     <input  type="number" value="1" min='1'  id="cantidad-{{detalle.id_detalle_carrito}}"/>
-                    <a href="#" onclick="elminarProducto({{detalle.id_detalle_carrito}});" class="btn btn-primary">Eliminar</a>
+                    <a href="#" onclick="cambiarCantidad({{detalle.id_detalle_carrito}},'cantidad-{{detalle.id_detalle_carrito}}');" class="btn btn-primary btn-block">Editar</a>
+                    <a href="#" onclick="elminarProducto({{detalle.id_detalle_carrito}});" class="btn btn-primary btn-block">Eliminar</a>
                   </div>
                 </div>
               </div>
