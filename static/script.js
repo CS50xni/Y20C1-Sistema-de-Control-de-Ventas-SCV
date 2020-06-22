@@ -1,4 +1,4 @@
-function realizarPeticion(ruta, nombreParam, valoresParam, mensaje){
+function realizarPeticion(ruta, nombreParam, valoresParam, mensaje, isReload){
     var xmlHTTP = new XMLHttpRequest();
     var url = ruta+"?";
     var cantidadParametros = nombreParam.length;
@@ -15,31 +15,47 @@ function realizarPeticion(ruta, nombreParam, valoresParam, mensaje){
                 var res = JSON.parse(this.responseText);
                 console.log(res);
                 alert(mensaje);//eliminar
-                return false;
-                location.reload();
+                if(isReload){
+                    location.reload();
+                }
+
             }
     };
     xmlHTTP.open("GET", url, true);
     xmlHTTP.send();
 }
 
-function agregarAlCarrito(nombre, precio, cantidad, categoria){
+function agregarAlCarrito(nombre, precio, idInput, categoria){
+
+    var cantidad = document.getElementById(idInput).value;
     var nombreParam = ['nombre', 'precio','cantidad', 'categoria'];
     var valoresParam = [nombre, precio, cantidad, categoria];
     var url ="/agregarDetalle";
-    realizarPeticion(url, nombreParam, valoresParam, "Agregado al carrito!");
+    realizarPeticion(url, nombreParam, valoresParam, "Agregado al carrito!", false);
 }
-function cambiarCantidad(id_detalle){
-    console.log("he entrado");
-    var cantidad = prompt("Ingrese la nueva cantidad: ");
-    // validar cantidad sea nulo
+function cambiarCantidad(id_detalle, IdInput){
 
-    var nombreParam = ['idDetalleCarrito','cantidad'];
-    var valoresParam = [id_detalle, cantidad];
-    var url ="/cambiarCantidad";
-    realizarPeticion(url, nombreParam, valoresParam, "Cantidad modificada!");
+    var cantidad = document.getElementById(IdInput).value;
+        // validar cantidad sea nulo
+    if(cantidad > 0){
+
+        var nombreParam = ['idDetalleCarrito','cantidad'];
+        var valoresParam = [id_detalle, cantidad];
+        var url ="/cambiarCantidad";
+        realizarPeticion(url, nombreParam, valoresParam, "Cantidad modificada!", true);
+
+    }
 }
 
 function comprar(){
-    realizarPeticion("/comprar", [], [], "Compra realizada!");
+    realizarPeticion("/comprar", [], [], "Compra realizada!", true);
+}
+
+function elminarProducto(id_detalle){
+    console.log("he entrado");
+    var nombreParam = ['idDetalleCarrito'];
+    var valoresParam = [id_detalle];
+    var url ="/eliminarProducto";
+    realizarPeticion(url, nombreParam, valoresParam,  "Producto Eliminado!", true)
+
 }

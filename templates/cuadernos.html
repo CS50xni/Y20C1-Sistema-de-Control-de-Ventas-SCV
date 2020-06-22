@@ -9,136 +9,184 @@
                 <div class="product-list">
                     <h2>Scribe</h2>
                     <img src="{{ url_for('static', filename='image/scribe1.png')}}" width="200">
-                    <h2>Precio C$ 80.00</h2>
+                    <h2>C$ 80.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min='1'  id="C1"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral',80.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral Disney',80.00,'C1','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Scribe</h2>
                     <img src="{{ url_for('static', filename='image/scribe2.png')}}" width="200">
-                    <h2>Precio C$ 40.00</h2>
+                    <h2>C$ 40.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Cuadriculado</li>
                         <li>Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min='1'  id="C2"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral Cuadriculado',40.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral Colors Cuadriculado',40.00,'C2','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Scribe</h2>
                     <img src="{{ url_for('static', filename='image/scribe3.png')}}" width="200">
-                    <h2>Precio C$ 100.00</h2>
+                    <h2>C$ 100.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C3"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral Lobo',100.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral Lobo',100.00,'C3','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Scribe</h2>
                     <img src="{{ url_for('static', filename='image/scribe4.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Espiral/Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C4"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Scribe 200pg Spiderman',120.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Scribe 200pg Espiral y Cocido Spiderman',120.00,'C4','Cuadernos')">Reservar</button>
                 </div>
     <!--Cuadernos Loro-->
                 <div class="product-list">
                     <h2>Loro</h2>
                     <img src="{{ url_for('static', filename='image/loro1.png')}}" width="200">
-                    <h2>Precio C$ 30.00</h2>
+                    <h2>C$ 30.00</h2>
                     <ul>
                         <li>100 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C5"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Loro 100pg',30.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Loro 100pg Cocido Colors',30.00,'C5','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Loro</h2>
                     <img src="{{ url_for('static', filename='image/loro2.png')}}" width="200">
-                    <h2>Precio C$ 90.00</h2>
+                    <h2>C$ 90.00</h2>
                     <ul>
                         <li>100 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C6"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Loro 100pg Cosido',90.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Loro 100pg Cosido Rex',90.00,'C6','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Loro</h2>
                     <img src="{{ url_for('static', filename='image/loro3.png')}}" width="200">
-                    <h2>Precio C$ 80.00</h2>
+                    <h2>C$ 80.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C7"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Loro 200pg Toy Story',80.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Loro 200pg Cocido Toy Story',80.00,'C7','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Loro</h2>
                     <img src="{{ url_for('static', filename='image/loro4.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
-                        <li>Cocido</li>
+                        <li>Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C8"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Loro 200pg Cocido',120.0,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Loro 200pg Espiral Lettering',120.0,'C8','Cuadernos')">Reservar</button>
                 </div>
     <!--Cuadernos Norma-->
                 <div class="product-list">
                     <h2>Norma</h2>
                     <img src="{{ url_for('static', filename='image/norma1.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C9"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Norma 200 Bart',120.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Norma 200pg Cocido Simpson',120.00,'C9','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Norma</h2>
                     <img src="{{ url_for('static', filename='image/norma2.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
-                        <li>Cocido</li>
+                        <li>Cocido y Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C10"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Norma 200pg Real Madrid',120.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Norma 200pg Espiral y Cocido Real Madrid',120.00,'C10','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Norma</h2>
                     <img src="{{ url_for('static', filename='image/norma3.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Cocido</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C11"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Norma 200pg Cosido Buho',120.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Norma 200pg Cosido Buho',120.00,'C11','Cuadernos')">Reservar</button>
                 </div>
                 <div class="product-list">
                     <h2>Norma</h2>
                     <img src="{{ url_for('static', filename='image/norma4.png')}}" width="200">
-                    <h2>Precio C$ 120.00</h2>
+                    <h2>C$ 120.00</h2>
                     <ul>
                         <li>200 Paginas</li>
                         <li>Rayados/Cuadriculado</li>
                         <li>Espiral</li>
+                        <div class="cantidad-product">
+                            <span>Cantidad</span>
+                            <input type="number" value="1" min="1" id="C12"/>
+                        </div>
                     </ul>
-                    <button onclick="agregarAlCarrito('Norma Espiral 200pg',120.00,1,'Cuadernos')">Reservar</button>
+                    <button onclick="agregarAlCarrito('Norma Espiral 200pg',120.00,'C12','Cuadernos')">Reservar</button>
                 </div>
             </div>
     </section>

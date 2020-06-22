@@ -3,37 +3,30 @@
 {% block titulo%}Reserva{% endblock %}
 {% block contenido %}
     <section>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio Unitario</th>
-            <th>Categoría</th>
-            <th>Cantidad</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td>TOTAL: {{total}}</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          {%for detalle in detalles%}
-          <tr>
-            <td>{{ detalle.nombre_prod }}</td>
-            <td>{{ detalle.precio }}</td>
-            <td>{{ detalle.categoria }}</td>
-            <td>{{ detalle.cantidad }}</td>
-            <td> boton editar | boton elimninar</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Comprar
-      </button>
-          <a href="/cuadernos"><button class="btn btn-primary"> Regresar</button></a>
+          <div class="container">
+            <div class="row">
+
+              {%for detalle in detalles%}
+              <div class="col-lg-6 col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <i class="fab fa-shopify"></i>
+                    <h5 class="card-title">{{ detalle.nombre_prod }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Categoría: {{ detalle.categoria }}</h6>
+                    <p class="card-text">Precio: ${{ detalle.precio }}
+                    <p class="card-text">Cantidad: {{ detalle.cantidad }}</p>
+                    <a href="#" onclick="cambiarCantidad({{detalle.id_detalle_carrito}},'cantidad-{{detalle.id_detalle_carrito}}');" class="btn btn-primary">Editar</a>
+                    <input  type="number" value="1" min='1'  id="cantidad-{{detalle.id_detalle_carrito}}"/>
+                    <a href="#" onclick="elminarProducto({{detalle.id_detalle_carrito}});" class="btn btn-primary">Eliminar</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <p>TOTAL: {{total}}</p>
+            <button type="button" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#exampleModal">Comprar</button>
+            <a href="/cuadernos"><button class="btn btn-outline-primary btn-block"> Regresar</button></a>
+          </div>
     </section>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">

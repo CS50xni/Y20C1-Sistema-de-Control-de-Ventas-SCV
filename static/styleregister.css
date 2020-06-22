@@ -76,6 +76,7 @@ a:link{
     margin-bottom: 30px;
 }
 
+
 .form-group{
     display: flex;
     flex-direction: column;
@@ -111,6 +112,7 @@ a:link{
 .boton-reg:hover{
     background: #0489B1;
 }
+
 
 /* Diseño Responsive*/
 @media screen and (max-width: 1220px){

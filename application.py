@@ -64,7 +64,7 @@ def reservas():
     detalles = db.execute("SELECT * FROM detalle_carrito WHERE id_carrito = :idcar", idcar = id_carrito)
     total = 0.0
     for detalle in detalles:
-        total += detalle["precio"] * detalle["cantidad"]
+        total += float(detalle["precio"]) * float(detalle["cantidad"])
     return render_template("reservas.html", detalles = detalles, total = total)
 
 @app.route("/lapices")
@@ -152,18 +152,18 @@ def cargarDetalle():
     precio = request.args.get("precio")
     cantidad = request.args.get("cantidad")
     categoria = request.args.get("categoria")
-    ##res= Select * from detalle carrito where producto = el producto que quiro y carrito=sea mi carrito
-    ##if res
-        ##update cantidad where carrito sea el correcto y el producto sea el correcto.
-    ##else
-        ##Insert
-    res = db.execute("INSERT INTO detalle_carrito (id_carrito, nombre_prod, cantidad, precio, categoria) VALUES(:idcar, :nombre,:cant, :prec, :cat)",
+    consulta = db.execute("SELECT * FROM detalle_carrito WHERE id_carrito= :id_carrito AND nombre_prod= :nombre", id_carrito=id_carrito, nombre=nombre)
+    if len(consulta) > 0:
+        res = db.execute("UPDATE detalle_carrito SET cantidad = cantidad + :cantidad WHERE nombre_prod = :nombre", cantidad=cantidad, nombre=nombre)
+    else:
+        res = db.execute("INSERT INTO detalle_carrito (id_carrito, nombre_prod, cantidad, precio, categoria) VALUES(:idcar, :nombre,:cant, :prec, :cat)",
                     idcar = id_carrito,
                     nombre = nombre,
                     cant = cantidad,
                     prec = precio,
                     cat = categoria)
     return jsonify(res)
+
 
 @app.route("/cambiarCantidad")
 def cambiarCantidad():
@@ -178,3 +178,12 @@ def comprar():
     id_carrito = cargarCarrito()
     res = db.execute("UPDATE carrito SET estado= 1 WHERE id_carrito = :ic", ic = id_carrito)
     return jsonify(res)
+
+
+@app.route("/eliminarProducto")
+def eliminarProducto():
+    id_carrito = cargarCarrito()
+    idDetalleCarrito = request.args.get("idDetalleCarrito")
+    res = db.execute("DELETE FROM detalle_carrito WHERE id_detalle_carrito = :iddc", iddc = idDetalleCarrito)
+    return jsonify(res)
+
